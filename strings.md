@@ -1,10 +1,10 @@
 | Index | Problem | Difficulty | Solved | Comments |
 | --- | --- | --- | --- | --- |
-| 1 | [Equality](https://codeforces.com/contest/1038/problem/A) | 800 |  |  |
-| 2 | [Cards](https://codeforces.com/contest/1220/problem/A) | 800 |  |  |
-| 3 | [Love "A"](https://codeforces.com/contest/1146/problem/A) | 800 |  |  |
-| 4 | [New Year and Naming](https://codeforces.com/contest/1284/problem/A) | 800 |  |  |
-| 5 | [Keyboard Layouts](https://codeforces.com/contest/831/problem/B) | 800 |  |  |
+| 1 | [Equality](https://codeforces.com/contest/1038/problem/A) | 800 |  | Easy  |
+| 2 | [Cards](https://codeforces.com/contest/1220/problem/A) | 800 |  | Easy |
+| 3 | [Love "A"](https://codeforces.com/contest/1146/problem/A) | 800 |  | Easy |
+| 4 | [New Year and Naming](https://codeforces.com/contest/1284/problem/A) | 800 |  | Easy |
+| 5 | [Keyboard Layouts](https://codeforces.com/contest/831/problem/B) | 800 |  | C++ pitfall: use for-auto to loop a char array is always wrong because of zero ending.|
 | 6 | [A Blend of Springtime](https://codeforces.com/contest/989/problem/A) | 900 |  |  |
 | 7 | [A Serial Killer](https://codeforces.com/contest/776/problem/A) | 900 |  |  |
 | 8 | [Delete from the Left](https://codeforces.com/contest/1005/problem/B) | 900 |  |  |
