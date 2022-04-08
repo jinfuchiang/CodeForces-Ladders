@@ -3,8 +3,8 @@
 | 1 | [Hit the Lottery](https://codeforces.com/contest/996/problem/A) | 800 |  | Greedy |
 | 2 | [Even Subset Sum Problem](https://codeforces.com/contest/1323/problem/A) | 800 |  | NOT DP |
 | 3 | [Card Constructions](https://codeforces.com/contest/1345/problem/B) | 1100 |  | 推公式+二分 |
-| 4 | [Petr and a Combination Lock](https://codeforces.com/contest/1097/problem/B) | 1200 |  |  |
-| 5 | [Cutting](https://codeforces.com/contest/998/problem/B) | 1200 |  |  |
+| 4 | [Petr and a Combination Lock](https://codeforces.com/contest/1097/problem/B) | 1200 |  | brute-force |
+| 5 | [Cutting](https://codeforces.com/contest/998/problem/B) | 1200 |  | Greedy |
 | 6 | [Creating the Contest](https://codeforces.com/contest/1029/problem/B) | 1200 |  |  |
 | 7 | [Ternary String](https://codeforces.com/contest/1354/problem/B) | 1200 |  |  |
 | 8 | [Restricted RPS](https://codeforces.com/contest/1245/problem/B) | 1200 |  |  |
