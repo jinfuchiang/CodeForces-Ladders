@@ -7,7 +7,7 @@
 | 5 | [Cutting](https://codeforces.com/contest/998/problem/B) | 1200 |  | Greedy |
 | 6 | [Creating the Contest](https://codeforces.com/contest/1029/problem/B) | 1200 |  | sliding window |
 | 7 | [Ternary String](https://codeforces.com/contest/1354/problem/B) | 1200 |  | sliding window |
-| 8 | [Restricted RPS](https://codeforces.com/contest/1245/problem/B) | 1200 |  |  |
+| 8 | [Restricted RPS](https://codeforces.com/contest/1245/problem/B) | 1200 |  | Easy(greedy) |
 | 9 | [Young Explorers](https://codeforces.com/contest/1355/problem/B) | 1200 |  |  |
 | 10 | [Polygon](https://codeforces.com/contest/1360/problem/E) | 1300 |  |  |
 | 11 | [Homecoming](https://codeforces.com/contest/1315/problem/B) | 1300 |  |  |
