@@ -9,7 +9,7 @@
 | 7 | [Ternary String](https://codeforces.com/contest/1354/problem/B) | 1200 |  | sliding window |
 | 8 | [Restricted RPS](https://codeforces.com/contest/1245/problem/B) | 1200 |  | Easy(greedy) |
 | 9 | [Young Explorers](https://codeforces.com/contest/1355/problem/B) | 1200 |  | Easy(greedy) |
-| 10 | [Polygon](https://codeforces.com/contest/1360/problem/E) | 1300 |  |  |
+| 10 | [Polygon](https://codeforces.com/contest/1360/problem/E) | 1300 |  | Observation |
 | 11 | [Homecoming](https://codeforces.com/contest/1315/problem/B) | 1300 |  |  |
 | 12 | [Just Eat It!](https://codeforces.com/contest/1285/problem/B) | 1300 |  |  |
 | 13 | [Lose it!](https://codeforces.com/contest/1176/problem/C) | 1300 |  |  |
