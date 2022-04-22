@@ -10,8 +10,7 @@
 | 8 | [Restricted RPS](https://codeforces.com/contest/1245/problem/B) | 1200 |  | Easy(greedy) |
 | 9 | [Young Explorers](https://codeforces.com/contest/1355/problem/B) | 1200 |  | Easy(greedy) |
 | 10 | [Polygon](https://codeforces.com/contest/1360/problem/E) | 1300 |  | Observation |
-| 11 | [Homecoming](https://codeforces.com/contest/1315/problem/B) | 1300 |  |  |
-| 12 | [Just Eat It!](https://codeforces.com/contest/1285/problem/B) | 1300 |  |  |
+| 12 | [Just Eat It!](https://codeforces.com/contest/1285/problem/B) | 1300 |  | Maximum Subarray |
 | 13 | [Lose it!](https://codeforces.com/contest/1176/problem/C) | 1300 |  |  |
 | 14 | [WOW Factor](https://codeforces.com/contest/1178/problem/B) | 1300 |  |  |
 | 15 | [Candies!](https://codeforces.com/contest/1189/problem/C) | 1400 |  |  |
