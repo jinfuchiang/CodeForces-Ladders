@@ -12,7 +12,7 @@
 | 10 | [Polygon](https://codeforces.com/contest/1360/problem/E) | 1300 |  | Observation |
 | 12 | [Just Eat It!](https://codeforces.com/contest/1285/problem/B) | 1300 |  | Maximum Subarray |
 | 13 | [Lose it!](https://codeforces.com/contest/1176/problem/C) | 1300 |  | Greedy |
-| 14 | [WOW Factor](https://codeforces.com/contest/1178/problem/B) | 1300 |  |  |
+| 14 | [WOW Factor](https://codeforces.com/contest/1178/problem/B) | 1300 |  | 排列组合类dp |
 | 15 | [Candies!](https://codeforces.com/contest/1189/problem/C) | 1400 |  |  |
 | 16 | [Basketball Exercise](https://codeforces.com/contest/1195/problem/C) | 1400 |  |  |
 | 17 | [Three displays](https://codeforces.com/contest/987/problem/C) | 1400 |  |  |
