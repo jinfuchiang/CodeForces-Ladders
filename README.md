@@ -21,3 +21,6 @@ Also, **Follow** me on Github to receive updates about upcoming CF related tools
 ### Topic-Wise Ladders:
 * [Strings](strings.md)
 * [Dynamic Programming](dynamicProgramming.md)
+
+### 问题规模与时间复杂度
+![问题规模与时间复杂度](input%20size%20v.s.%20time%20complexity.jpg)
