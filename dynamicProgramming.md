@@ -18,7 +18,7 @@
 | 17 | [Three displays](https://codeforces.com/contest/987/problem/C) | 1400 |  | 最长上升子序列类dp |
 | 18 | [The Number of Products](https://codeforces.com/contest/1215/problem/B) | 1400 |  | 最长上升子序列dp |
 | 19 | [Orac and Models](https://codeforces.com/contest/1350/problem/B) | 1400 |  | 枚举倍数类dp（调和技术求和） |
-| 20 | [Skyscrapers (easy version)](https://codeforces.com/contest/1313/problem/C1) | 1500 |  |  |
+| 20 | [Skyscrapers (easy version)](https://codeforces.com/contest/1313/problem/C1) | 1500 |  | 山脉数组类问题 LIS类dp [+ 单调栈（Hard）] |
 | 21 | [Gas Pipeline](https://codeforces.com/contest/1207/problem/C) | 1500 |  |  |
 | 22 | [Two Arrays](https://codeforces.com/contest/1288/problem/C) | 1600 |  |  |
 | 23 | [Standard Free2play](https://codeforces.com/contest/1238/problem/C) | 1600 |  |  |
