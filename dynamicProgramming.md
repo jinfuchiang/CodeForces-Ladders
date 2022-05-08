@@ -20,7 +20,7 @@
 | 19 | [Orac and Models](https://codeforces.com/contest/1350/problem/B) | 1400 |  | 枚举倍数类dp（调和技术求和） |
 | 20 | [Skyscrapers (easy version)](https://codeforces.com/contest/1313/problem/C1) | 1500 |  | 山脉数组类问题 LIS类dp [+ 单调栈（Hard）] |
 | 21 | [Gas Pipeline](https://codeforces.com/contest/1207/problem/C) | 1500 |  | 打家劫舍类dp |
-| 22 | [Two Arrays](https://codeforces.com/contest/1288/problem/C) | 1600 |  |  |
+| 22 | [Two Arrays](https://codeforces.com/contest/1288/problem/C) | 1600 |  | dp（或隔板法） |
 | 23 | [Standard Free2play](https://codeforces.com/contest/1238/problem/C) | 1600 |  |  |
 | 24 | [Linova and Kingdom](https://codeforces.com/contest/1336/problem/A) | 1600 |  |  |
 | 25 | [New Year and the Permutation Concatenation](https://codeforces.com/contest/1091/problem/D) | 1700 |  |  |
