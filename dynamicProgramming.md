@@ -21,8 +21,8 @@
 | 20 | [Skyscrapers (easy version)](https://codeforces.com/contest/1313/problem/C1) | 1500 |  | 山脉数组类问题 LIS类dp [+ 单调栈（Hard）] |
 | 21 | [Gas Pipeline](https://codeforces.com/contest/1207/problem/C) | 1500 |  | 打家劫舍类dp |
 | 22 | [Two Arrays](https://codeforces.com/contest/1288/problem/C) | 1600 |  | dp（或[隔板法](https://www.bilibili.com/s/video/BV1Ks411y79w)）。[更多隔板法问题](https://cp-algorithms.com/combinatorics/stars_and_bars.html) |
-| 23 | [Standard Free2play](https://codeforces.com/contest/1238/problem/C) | 1600 |  |  |
-| 24 | [Linova and Kingdom](https://codeforces.com/contest/1336/problem/A) | 1600 |  |  |
+| 23 | [Standard Free2play](https://codeforces.com/contest/1238/problem/C) | 1600 |  | 观察法 |
+| 24 | [Linova and Kingdom](https://codeforces.com/contest/1336/problem/A) | 1600 |  | 观察法 |
 | 25 | [New Year and the Permutation Concatenation](https://codeforces.com/contest/1091/problem/D) | 1700 |  |  |
 | 26 | [Magic Tricks](https://codeforces.com/contest/1346/problem/E) | 1700 |  |  |
 | 27 | [Three Blocks Palindrome (easy version)](https://codeforces.com/contest/1335/problem/E1) | 1700 |  |  |
