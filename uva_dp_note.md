@@ -204,3 +204,134 @@ int main()
 }
 
 ```
+### [	劲歌金曲 Jin Ge Jin Qu hao](https://www.luogu.com.cn/training/3130#problems)
+```C++
+#include <bits/extc++.h>
+using namespace std;
+
+// struct {
+// 	template<typename T>
+// 	operator T() {T t; cin >> t; return t;}
+// } IN;
+
+typedef long long LL; 
+typedef pair<int, int> pii; 
+typedef pair<LL, LL> pll; 
+typedef pair<string, string> pss; 
+typedef vector<int> vi; 
+typedef vector<vi> vvi; 
+typedef vector<pii> vii; 
+typedef vector<LL> vl; 
+typedef vector<vl> vvl; 
+
+#define INF 1000000000
+#define FOR(a, b, c) for (int(a) = (b); (a) < (c); ++(a)) 
+#define REP(a, b, c) for (int(a) = (b); (a) <= (c); ++(a)) 
+#define REPD(a, b, c) for (int(a) = (b); (a) >= (c); --(a))
+#define FORSQ(a, b, c) for (int(a) = (b); (a) * (a) <= (c); ++(a)) 
+#define FORC(a, b, c) for (char(a) = (b); (a) <= (c); ++(a)) 
+#define MAX(a, b) a = max(a, b) 
+#define MIN(a, b) a = min(a, b) 
+#define SQR(x) ((LL)(x) * (x)) 
+#define RESET(a, b) memset(a, b, sizeof(a)) 
+#define fi first m
+#define se second 
+#define pb push_back 
+#define ALL(v) v.begin(), v.end() 
+#define ALLA(arr, sz) arr, arr + sz 
+#define SIZE(v) (int)v.size() 
+#define SORT(v) sort(ALL(v)) 
+#define REVERSE(v) reverse(ALL(v)) 
+#define SORTA(arr, sz) sort(ALLA(arr, sz)) 
+#define REVERSEA(arr, sz) reverse(ALLA(arr, sz)) 
+#define PERMUTE next_permutation 
+
+using namespace std; 
+#define MAX_TIME_LEFT (3*60*50)
+
+int len_songs[51];
+int dp[51][MAX_TIME_LEFT+5];
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    
+	int T; int kase = 1; cin >> T;
+    while(T--) {
+        int n_songs, time_left; cin >> n_songs >> time_left;
+        time_left = min(time_left, MAX_TIME_LEFT);
+        REP(i, 1, n_songs) {
+            cin >> len_songs[i];
+        }
+
+        memset(dp, 0, sizeof(dp));
+
+        REP(i, 1, n_songs) {
+            REP(j, 0, time_left) {
+                int &v = dp[i][j];
+                v = dp[i-1][j];
+                if(j-len_songs[i] >= 0) v = max(v, dp[i-1][j-len_songs[i]]+1);
+            }
+        }
+
+        int max_songs = dp[n_songs][time_left];
+        int max_len_songs = 0;
+        REPD(time_left_cur, time_left, 0) {
+            int cur_len_songs = 0;
+            int time = time_left_cur;
+            int cur_songs = dp[n_songs][time];
+
+            if(max_songs > cur_songs + 1) continue;
+            // if(dp[n_songs][time_left-1] == dp[n_songs][time_left]) {
+            //     time = time_left; max_songs++;
+            // }
+            int song_i = n_songs;
+            while(dp[song_i][time]) {
+                int new_time = time-len_songs[song_i];
+                if(new_time >= 0 && dp[song_i-1][new_time]+1 == dp[song_i][time]) {
+                    time = new_time;
+                    cur_len_songs += len_songs[song_i];
+                } else {
+                    assert(dp[song_i-1][time] == dp[song_i][time]);
+                }
+                --song_i;
+            }
+            if(cur_len_songs < time_left) {
+                cur_songs++;
+                cur_len_songs += 678;
+            }
+            if(cur_songs >= max_songs) {
+                max_songs = cur_songs;
+                max_len_songs = max(cur_len_songs, max_len_songs);
+            }
+        }
+        
+        
+        // REP(i, 0, MAX_TIME_LEFT) {
+        //     dp[0][i] = len_songs[i] >= MAX_TIME_LEFT ? 1 : 0;
+        // }
+        // FOR(i, 1, n_songs) {
+        //     REP(j, 0, MAX_TIME_LEFT) {
+        //         dp[i][j] = dp[i-1][j];
+        //         if(j+len_songs[i] <= MAX_TIME_LEFT)
+        //             dp[i][j] = max(dp[i][j], dp[i-1][j+len_songs[i]]+1);
+        //     }
+        // }
+        // int max_songs = dp[n_songs-1][0];
+        // FOR(i, 1, MAX_TIME_LEFT) {
+        //     if(dp[n_songs-1][i] != max_songs)
+        // }
+
+        cout << "Case " << kase++ << ": ";
+        cout << max_songs << ' ' << max_len_songs; cout << '\n';
+
+    }
+   
+}
+
+
+
+
+
+```
