@@ -1,3 +1,4 @@
+## [题单](https://www.luogu.com.cn/training/3130#problems)
 ### [UVA1025 城市里的间谍 A Spy in the Metro](https://www.luogu.com.cn/problem/UVA1025)
 1. DAG 上的最短路。
 2. dp[i][j] 代表 i 时刻在第 j 个车站的最小总等待时间，也就是以 (i, j) 结束的最短路。初始时间为 0，初始车站为 1，所以 dp[0][1] = 0，0 时刻其他车站的等待时间为 INF，即不可达。由于时间是天然的拓扑序，所以按照时间顺序计算每个dp值即可。
@@ -204,7 +205,7 @@ int main()
 }
 
 ```
-### [	劲歌金曲 Jin Ge Jin Qu hao](https://www.luogu.com.cn/training/3130#problems)
+### [劲歌金曲 Jin Ge Jin Qu hao](https://www.luogu.com.cn/training/3130#problems)
 ```C++
 #include <bits/extc++.h>
 using namespace std;
@@ -329,9 +330,59 @@ int main()
     }
    
 }
-
-
-
-
-
 ```
+
+###[UVA11584 划分成回文串 Partitioning by Palindromes](https://www.luogu.com.cn/problem/UVA11584)
+'''C++
+#define LEN 10005
+
+int len;
+int dp[LEN+1];
+char str[LEN+1+1];
+bool is_palindromes[LEN+1][LEN+1];
+
+int solve() {
+    dp[0] = 0; memset(is_palindromes, false, sizeof(is_palindromes));
+
+    REP(init, 1, len) {
+        int i = init, j = init+1;
+        while(i >= 1 && j <= len && str[i] == str[j]) {
+            is_palindromes[i][j] = true;
+            --i, ++j;
+        }
+    }
+
+    REP(init, 1, len) {
+        int i = init-1, j = init+1;
+        while(i >= 1 && j <= len && str[i] == str[j]) {
+            is_palindromes[i][j] = true;
+            --i, ++j;
+        }
+    }
+
+    REP(i, 1, len) {
+        dp[i] = dp[i-1] + 1;
+        REP(j, 1, i-1) {
+            if(is_palindromes[j][i]){
+                dp[i] = min(dp[j-1] + 1, dp[i]);
+            }
+        }        
+    }
+    return dp[len];
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int t; cin >> t;
+    while (t--)
+    {
+        cin >> str+1;
+        len = strlen(str+1);
+        
+        cout << solve() << '\n';
+    }
+    
+}
+'''
