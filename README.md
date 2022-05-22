@@ -24,3 +24,6 @@ Also, **Follow** me on Github to receive updates about upcoming CF related tools
 
 ### 问题规模与时间复杂度
 ![问题规模与时间复杂度](input%20size%20v.s.%20time%20complexity.jpg)
+
+### 高级算法索引
+[算法学习笔记](https://www.zhihu.com/column/c_1182444932760125440)
