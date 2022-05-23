@@ -154,5 +154,90 @@ int main()
 ```
 ### 两亲性分子（Amphiphilic Carbon Molecules, ACM/ICPC Shanghai 2004, UVa1606）
 #### 题意
-二维平面上有N个点。一条直线，使得该直线一侧的黑点数量与另一侧的白点数量的和最大
+二维平面上有N个点。求一条直线，使得该直线一侧的黑点数量与另一侧的白点数量的和最大，输出最大和。直线上的点可被视作放在任何一侧。
 #### 思路
+1. 理论上来说所求直线有无数条，但总是可以通过旋转和平移使这些直线经过两点。所以我们只需通过枚举两点构造直线，统计直线的两侧的黑白点数即可。
+2. naive 的枚举加统计的时间复杂度为 O(n^3)，而 n 最大为 10^3，TLE。
+3. 给定一条直线后，可以将所有白点（或黑点）对称映射到另一侧。这样，只用统计一侧点的数目，从而不用再统计两侧白点和黑点数目。
+4. 枚举两点 A, B 构造一条直线，对称映射其他的点，统计直线一侧点的数目。统计方法是：以 A 点为旋转轴，逆时针遍历其他点，统计在直线正侧点的数目（记为 n），并记录第一个在直线 AB 负侧的点（设该点为 D，即 AB×AD < 0）。
+5. 之后将该直线顺时针（或逆时针，关键是要按序旋转）旋转到B的下一点，设为 C。此时我们无需再从 C 点开始按顺时针一个一个地统计，直接从 D 点开始，此时在 AD 正侧的点数排除掉 A 点，点数为 n-1，然后重复 4 的过程。如此，可减少遍历点的次数。
+6. 按顺时针旋转需要对极∠排序，所以总时间复杂度O(n^2logn)。
+7. 极角排序有两种排序准则：
+	1. double atan2 (double y     , double x);
+	2. 根据象限和叉乘排序
+```cpp
+bool up(Point p) {
+    return (p.y > 0 || (p.y == 0 && p.x >= 0));
+}
+sort(ALL(vec), [](Point p1, Point p2){
+                    // return (p1.r < p2.r);
+                    return up(p1) != up(p2) ? up(p1) < up(p2) : p1.x * p2.y >= p1.y * p2.x;
+                });
+```
+#### 代码
+```cpp
+#define MAXN 1005
+
+struct Point{
+    LL x, y, type; long double r;
+} points[MAXN];
+vector<Point> vec;
+
+int get_cur_ans() {
+    int R = 0, sz = vec.size();
+    int ans = 2, max_ans = 0;
+    FOR(L, 0, sz) {
+        auto [x1, y1, t1, r1] = vec[L];
+        if(L == R) {(++R) %= sz; ans = 2;}
+        while(R != L) {
+            auto [x2, y2, t2, r2] = vec[R];
+            if(x1 * y2 >= x2 * y1) {
+                ++ans; (++R) %= sz;
+            }
+            else break;
+        }
+        max_ans = max(max_ans, ans);
+        --ans;
+    }
+    return max_ans;
+}
+bool up(Point p) {
+    return (p.y > 0 || (p.y == 0 && p.x >= 0));
+}
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+	int n;
+    while(cin >> n && n) {
+        if(n <= 2) {cout << n << '\n'; continue;};
+        FOR(i, 0, n) cin >> points[i].x >> points[i].y >> points[i].type;
+        int ans = 0;
+        FOR(i, 0, n) {
+            {
+                vec.clear();
+                Point base = points[i];
+                FOR(j, 0, n) if(i != j) {
+                    Point p = points[j];
+                    p.x -= base.x, p.y -= base.y;
+                    if(p.type == 1) {
+                        p.x = -p.x, p.y = -p.y;
+                    }
+                    // p.r = atan2l(p.y, p.x);
+                    vec.push_back(p);
+                }
+
+                sort(ALL(vec), [](Point p1, Point p2){
+                    // return (p1.r < p2.r);
+                    return up(p1) != up(p2) ? up(p1) < up(p2) : p1.x * p2.y >= p1.y * p2.x;
+                });
+            }
+            ans = max(ans, get_cur_ans());
+        }
+        cout << ans << '\n';
+    }
+}
+```
+
+
+
